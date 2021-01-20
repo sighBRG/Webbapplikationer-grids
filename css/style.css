@@ -8,17 +8,16 @@ section,
 aside,
 footer {
     border: 1px solid grey;
+    min-height: 100px;
 }
 
 #container {
     margin: 0 auto;
     width: 90%;
-    height: 90%;
-    min-height: 800px;
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
 			"header header header header header header header header header header header header"
 			"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
@@ -93,12 +92,14 @@ footer {
     grid-area: content;
 }
 
+/*
+Desktop
+ */
 @media screen and (min-width: 1200px) {
 	#container {
         margin: 0 auto;
         width: 90%;
-        height: 90%;
-        min-height: 1200px;
+
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -112,16 +113,17 @@ footer {
 	}
 }
 
+/*
+Mindre desktop
+ */
 @media screen and (max-width: 1200px) and (min-width: 960px) {
     #container {
         margin: 0 auto;
         width: 90%;
-        height: 90%;
-        min-height: 960px;
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
 			"header header header header header header header header header header header header"
 			"box1 box1 box1 box2 box2 box2 box2 box2 box2 box3 box3 box3"
@@ -132,23 +134,40 @@ footer {
 }
 
 /*
-tablet
+Tablet
  */
 @media screen and (max-width: 960px) and (min-width: 768px) {
     #container {
         margin: 0 auto;
         width: 90%;
-        height: 90%;
-        min-height: 768px;
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
 			"header header header header header header header header header header header header"
 			"box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
 			"content content content content content content sidebar sidebar sidebar sidebar sidebar sidebar"
             "footer footer footer footer footer footer footer footer footer footer footer footer";
+        gap: 2%;
+    }
+}
+
+/*
+Footer
+ */
+@media screen and (max-width: 960px) and (min-width: 768px) {
+    .footer {
+        margin: 0 auto;
+        width: 97%;
+
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "footer-section1 footer-section1 footer-section1 footer-section1 footer-section1 footer-section1 footer-section2 footer-section2 footer-section2 footer-section2 footer-section2 footer-section2"
+            "footer-section3 footer-section3 footer-section3 footer-section3 footer-section3 footer-section3 footer-section4 footer-section4 footer-section4 footer-section4 footer-section4 footer-section4";
         gap: 2%;
     }
 }
@@ -161,18 +180,40 @@ mobiltelefon
     #container {
         margin: 0 auto;
         width: 90%;
-        height: 90%;
-
-        max-height: 768px;
 
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, minmax(100px, auto));
         grid-template-areas:
-			"header header header header header header header header header header header header"
-			"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
-			"content content content content content content content content content sidebar sidebar sidebar"
-            "footer footer footer footer footer footer footer footer footer footer footer footer";
+			"header"
+			"box1"
+            "box2"
+            "box3"
+			"content"
+            "sidebar"
+            "footer";
         gap: 2%;
+    }
+}
+
+
+
+/*
+Footer-contents
+ */
+@media screen and (max-width: 768px) {
+    .footer {
+        margin: 0 auto;
+        width: 96%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "footer-section1"
+            "footer-section2"
+            "footer-section3"
+            "footer-section4";
+        gap: 20px 2%;
     }
 }
