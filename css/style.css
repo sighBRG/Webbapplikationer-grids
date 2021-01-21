@@ -14,8 +14,8 @@ footer {
 #container {
     margin: 0 auto;
     width: 90%;
-
     display: grid;
+
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
@@ -96,21 +96,21 @@ footer {
 Desktop
  */
 @media screen and (min-width: 1200px) {
-	#container {
+    #container {
         margin: 0 auto;
         width: 90%;
 
 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
 			"header header header header header header header header header header header header"
 			"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
 			"content content content content content content content content content sidebar sidebar sidebar"
             "footer footer footer footer footer footer footer footer footer footer footer footer";
         gap: 2%;
-	}
+    }
 }
 
 /*
@@ -197,7 +197,6 @@ mobiltelefon
 }
 
 
-
 /*
 Footer-contents
  */
@@ -218,3 +217,50 @@ Footer-contents
     }
 }
 
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: beige;
+
+}
+
+.header-buttons button {
+    margin-right: 10px;
+    border: 1px solid #bcbcbc;
+}
+
+.header-buttons button:last-child {
+    margin-right: 0;
+}
+
+.button-4 {
+    margin-left: auto;
+}
+
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    background-color: beige;
+}
+
+.sidebar-buttons button {
+    margin-bottom: 10px;
+    border: 1px solid #bcbcbc;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: beige;
+    padding: 5px;
+}
+
+.content-section section {
+    flex: 1 1 240px;
+    margin: 7px;
+
+}
