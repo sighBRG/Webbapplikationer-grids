@@ -260,6 +260,7 @@ Footer-contents
 }
 
 .content-section section {
-    flex: 1 1 33%;
+    flex: 1 1 240px;
     margin: 7px;
+
 }
